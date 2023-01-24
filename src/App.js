@@ -5,15 +5,8 @@ import MainContainer from './MainContainer';
 
 function App() {
 
-  const [pokemon, setPokemon] = useState([])
 
-  useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/?limit=151')
-    .then((res) => res.json())
-    .then((data) => setPokemon(data))
-  }, [])
-
-  console.log(pokemon)
+  // console.log(pokemon.results[0])
 
   return (
     <div>
