@@ -10,13 +10,14 @@ function PokeCard(singlePoke){
         fetch(singlePoke.singlePoke.url)
         .then((res) => res.json())
         .then((data) => setPoke(data))
-      }, [])
+      }, [singlePoke])
 
     console.log(singlePoke)
     console.log(poke)
     return(
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={poke.sprites.front_default} />
+            {/* When this line below is taken out and then reputback in, the sprites show up, but when the page gets reloaded it breaks everything */}
+            {/* <Card.Img variant="top" src={poke.sprites.front_default} /> */}
             <Card.Body>
                 <Card.Title>{singlePoke.singlePoke.name}</Card.Title>
                 <Card.Text>
