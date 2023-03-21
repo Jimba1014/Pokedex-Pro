@@ -14,7 +14,7 @@ function MainContainer(){
     // console.log(pokemon.results)
 
     const individualPoke = pokemon?.results?.map( singlePoke => {
-        return <PokeCard key={singlePoke.id} singlePoke={singlePoke}/>
+        return <PokeCard key={singlePoke.name} pokemon={pokemon} singlePoke={singlePoke}/>
     })
 
     return(

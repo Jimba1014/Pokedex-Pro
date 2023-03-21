@@ -2,24 +2,22 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {useEffect, useState} from "react";
 
-function PokeCard(singlePoke){
+function PokeCard({singlePoke}){
 
     const [poke, setPoke] = useState([])
 
     useEffect(() => {
-        fetch(singlePoke.singlePoke.url)
+        fetch(singlePoke.url)
         .then((res) => res.json())
         .then((data) => setPoke(data))
       }, [singlePoke])
 
-    console.log(singlePoke)
-    console.log(poke)
     return(
         <Card style={{ width: '18rem' }}>
             {/* When this line below is taken out and then reputback in, the sprites show up, but when the page gets reloaded it breaks everything */}
             {/* <Card.Img variant="top" src={poke.sprites.front_default} /> */}
             <Card.Body>
-                <Card.Title>{singlePoke.singlePoke.name}</Card.Title>
+                <Card.Title>{singlePoke.name}</Card.Title>
                 <Card.Text>
                 Some quick example text to build on the card title and make up the
                 bulk of the card's content.
