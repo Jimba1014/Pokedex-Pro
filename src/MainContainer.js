@@ -18,8 +18,7 @@ function MainContainer(){
     })
 
     return(
-        <div>
-            MainPokeContainer
+        <div className="pokemonContainer">
             {individualPoke}
         </div>
     )
