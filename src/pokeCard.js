@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {useEffect, useState} from "react";
 
-function PokeCard({singlePoke}){
+function PokeCard({singlePoke, pokemon}){
 
     const [poke, setPoke] = useState([])
 
@@ -10,7 +10,7 @@ function PokeCard({singlePoke}){
         fetch(singlePoke.url)
         .then((res) => res.json())
         .then((data) => setPoke(data))
-      }, [singlePoke])
+      }, [singlePoke, pokemon])
 
     return(
         <Card style={{ width: '18rem' }}>
