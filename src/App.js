@@ -10,9 +10,10 @@ function App() {
 
   return (
     <div>
+      <div>Pokemon</div>
       <PokeNav/>
       <MainContainer/>
-      <div>Pokemon</div>
+      
     </div>
   );
 }
