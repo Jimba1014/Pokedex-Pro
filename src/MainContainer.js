@@ -15,6 +15,10 @@ function MainContainer(){
       .then((data) => setPokemon(data))
     }, [])
 
+    // function handleGeneration(){
+    //     setRegion(prev => value)
+    // }
+
     // console.log(pokemon.results)
 
     const individualPoke = pokemon?.results?.map( singlePoke => {
@@ -24,33 +28,34 @@ function MainContainer(){
     return(
         <div>
             <div>
-            <DropdownButton
-            as={ButtonGroup}
-            key={"primary"}
-            variant={"primary"}
-            title={"Choose a Generation"}
-          >
-            <Dropdown.Item eventKey="1" active>
-                Generation 1
-            </Dropdown.Item>
-            <Dropdown.Item eventKey="2">
-                Generation 2
-            </Dropdown.Item>
-            <Dropdown.Item eventKey="3">
-                Generation 3
-            </Dropdown.Item>
-            <Dropdown.Item eventKey="4">
-                Generation 4
-            </Dropdown.Item>
-            <Dropdown.Item eventKey="5">
-                Generation 5
-            </Dropdown.Item>
-            <Dropdown.Item eventKey="6">
-                Generation 6
-            </Dropdown.Item>
-            {/* <Dropdown.Divider /> */}
-            {/* <Dropdown.Item eventKey="4">Separated link</Dropdown.Item> */}
-          </DropdownButton>
+                <DropdownButton
+                as={ButtonGroup}
+                key={"primary"}
+                variant={"primary"}
+                title={"Choose a Generation"}
+                // onSubmit={handleGeneration}
+                >
+                    <Dropdown.Item eventKey="1" value={1} active>
+                        Generation 1
+                    </Dropdown.Item>
+                    <Dropdown.Item eventKey="2" value={2}>
+                        Generation 2
+                    </Dropdown.Item>
+                    <Dropdown.Item eventKey="3" value={3}>
+                        Generation 3
+                    </Dropdown.Item>
+                    <Dropdown.Item eventKey="4">
+                        Generation 4
+                    </Dropdown.Item>
+                    <Dropdown.Item eventKey="5">
+                        Generation 5
+                    </Dropdown.Item>
+                    <Dropdown.Item eventKey="6">
+                        Generation 6
+                    </Dropdown.Item>
+                    {/* <Dropdown.Divider /> */}
+                    {/* <Dropdown.Item eventKey="4">Separated link</Dropdown.Item> */}
+                </DropdownButton>
             </div>
             <div className="pokemonContainer">
                 {individualPoke}
