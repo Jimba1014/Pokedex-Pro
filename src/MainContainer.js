@@ -44,13 +44,13 @@ function MainContainer(){
                     <Dropdown.Item eventKey="3" value={3}>
                         Generation 3
                     </Dropdown.Item>
-                    <Dropdown.Item eventKey="4">
+                    <Dropdown.Item eventKey="4" value={4}>
                         Generation 4
                     </Dropdown.Item>
-                    <Dropdown.Item eventKey="5">
+                    <Dropdown.Item eventKey="5" value={5}>
                         Generation 5
                     </Dropdown.Item>
-                    <Dropdown.Item eventKey="6">
+                    <Dropdown.Item eventKey="6" value={6}>
                         Generation 6
                     </Dropdown.Item>
                     {/* <Dropdown.Divider /> */}
